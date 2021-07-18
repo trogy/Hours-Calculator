@@ -1,4 +1,5 @@
 <?php
+session_start();
 function decimal_to_time($decimal) {
     $hours = floor($decimal % 60);
     $minutes = $decimal - (int)$decimal;
@@ -50,23 +51,36 @@ echo "Hours From: " . date("d/m", $D1_TS_Start) . " - " . date("d/m", $D5_TS_Sta
 echo "<br>";
 echo "=====================";
 echo "<br>";
-echo date("d/m", $D1_TS_Start) . " | " . date('H:i', $D1_TS_Start) . " - " . date('H:i', $D1_TS_End) . " | " . decimal_to_time($SUM_D1);
+echo date("d/m", $D1_TS_Start) . " | " . date('H:i', $D1_TS_Start) . " - " . date('H:i', $D1_TS_End) . " | " . $_SESSION['D1_TOTAL'] = decimal_to_time($SUM_D1);
 echo "<br>";
-echo date("d/m", $D2_TS_Start) . " | " . date('H:i', $D2_TS_Start) . " - " . date('H:i', $D2_TS_End) . " | " . decimal_to_time($SUM_D2);
+echo date("d/m", $D2_TS_Start) . " | " . date('H:i', $D2_TS_Start) . " - " . date('H:i', $D2_TS_End) . " | " . $_SESSION['D2_TOTAL'] = decimal_to_time($SUM_D2);
 echo "<br>";
-echo date("d/m", $D3_TS_Start) . " | " . date('H:i', $D3_TS_Start) . " - " . date('H:i', $D3_TS_End) . " | " . decimal_to_time($SUM_D3);
+echo date("d/m", $D3_TS_Start) . " | " . date('H:i', $D3_TS_Start) . " - " . date('H:i', $D3_TS_End) . " | " . $_SESSION['D3_TOTAL'] = decimal_to_time($SUM_D3);
 echo "<br>";
-echo date("d/m", $D4_TS_Start) . " | " . date('H:i', $D4_TS_Start) . " - " . date('H:i', $D4_TS_End) . " | " . decimal_to_time($SUM_D4);
+echo date("d/m", $D4_TS_Start) . " | " . date('H:i', $D4_TS_Start) . " - " . date('H:i', $D4_TS_End) . " | " . $_SESSION['D4_TOTAL'] = decimal_to_time($SUM_D4);
 echo "<br>";
-echo date("d/m", $D5_TS_Start) . " | " . date('H:i', $D5_TS_Start) . " - " . date('H:i', $D5_TS_End) . " | " . decimal_to_time($SUM_D5);
+echo date("d/m", $D5_TS_Start) . " | " . date('H:i', $D5_TS_Start) . " - " . date('H:i', $D5_TS_End) . " | " . $_SESSION['D5_TOTAL'] = decimal_to_time($SUM_D5);
 echo "<br>";
 echo "=====================";
 echo "<br>";
 $SUM_HRS = $SUM_D1 + $SUM_D2 + $SUM_D3 + $SUM_D4 + $SUM_D5;
-echo "WEEK TOTAL:" . decimal_to_time($SUM_HRS);
+echo "WEEK TOTAL:" . $_SESSION['TOTAL_HOURS'] = decimal_to_time($SUM_HRS);
 echo "<br>";
 echo "<br>";
 echo "Generated Time: " . date("d/m/Y h:i:sa") . "<br>";
+
+$_SESSION['D1_TS_Start'] = $D1_TS_Start;
+$_SESSION['D2_TS_Start'] = $D2_TS_Start;
+$_SESSION['D3_TS_Start'] = $D3_TS_Start;
+$_SESSION['D4_TS_Start'] = $D4_TS_Start;
+$_SESSION['D5_TS_Start'] = $D5_TS_Start;
+
+$_SESSION['D1_TS_End'] = $D1_TS_End;
+$_SESSION['D2_TS_End'] = $D2_TS_End;
+$_SESSION['D3_TS_End'] = $D3_TS_End;
+$_SESSION['D4_TS_End'] = $D4_TS_End;
+$_SESSION['D5_TS_End'] = $D5_TS_End;
 ?>
 <hr>
 <input type="button" value="< Back" onclick="history.back()">
+<a href="makepdf.php"><input type="button" value="Generate PDF [BETA]"></a>

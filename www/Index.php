@@ -19,7 +19,7 @@
 </head>
 <body>
   <div class="logo">
-    <img src="https://trogy.nz/wp-content/uploads/2021/03/Trogy.NZDARK.png" width=350>
+    <img src="logo.png" width=350>
   </div>
   <div class="logo-text">
     <h5> Trogy.NZ Hours Calculator </h5>
