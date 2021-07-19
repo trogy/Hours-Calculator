@@ -1,5 +1,8 @@
 <?php
 session_start();
+echo'<link rel="stylesheet" href="CSS/bootstrap.min.css">
+<link rel="stylesheet" href="CSS/animate.min.css">
+<body class="animate__animated animate__fadeIn">';
 function decimal_to_time($decimal) {
     $hours = floor($decimal % 60);
     $minutes = $decimal - (int)$decimal;
@@ -40,11 +43,13 @@ $SUM_D4 = abs($D4_TS_End - $D4_TS_Start)/(60*60);
 $SUM_D5 = abs($D5_TS_End - $D5_TS_Start)/(60*60);
 
 echo"<style>
-  html{
-    font-family: Arial;
+  body{
+    padding: 10px;
+    margin:auto;
+    text-align:center;
   }
  </style>";
-echo "Tip: Copy all text within the lines";
+echo "<h3>Here are your hours. Formatted nicely for email just hit copy and send.</h3>";
 echo "<hr>";
 echo "Trogy.NZ Hours Calculator <br>";
 echo "Hours From: " . date("d/m", $D1_TS_Start) . " - " . date("d/m", $D5_TS_Start);
@@ -82,5 +87,9 @@ $_SESSION['D4_TS_End'] = $D4_TS_End;
 $_SESSION['D5_TS_End'] = $D5_TS_End;
 ?>
 <hr>
-<input type="button" value="< Back" onclick="history.back()">
+<h5> Alternatively you can now make a PDF.</h5>
 <a href="makepdf.php"><input type="button" value="Generate PDF [BETA]"></a>
+<br>
+<br>
+<input type="button" value="< Back" onclick="history.back()">
+</body>
