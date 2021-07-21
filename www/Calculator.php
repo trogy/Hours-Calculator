@@ -89,6 +89,8 @@ $_SESSION['D5_TS_End'] = $D5_TS_End;
 <hr>
 <h5> Alternatively you can now make a PDF.</h5>
 <a href="makepdf.php"><input type="button" value="Generate PDF [BETA]"></a>
+<a href="emailform.php"><input type="button" value="Send Email [ALPHA]"></a>
+<p> [i] - Sending Email Requires A Valid SendGrid API Key </p>
 <br>
 <br>
 <input type="button" value="< Back" onclick="history.back()">
