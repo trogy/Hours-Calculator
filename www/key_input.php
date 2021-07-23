@@ -34,10 +34,18 @@
   </div>
             <form class="form-signin" id="form" action="key_write.php" method="POST">
             <div class="Flex-Container animate__animated animate__delay-1s animate__backInUp" id="Flex-Container">
+            <div class="Flex-Item">
               <p> Key &nbsp; </p>
               <div class="form-label-group">
                 <input type="password" name="API_KEY" id="API_KEY" class="form-control" required>
               </div>
+            </div>
+            <div class="Flex-Item">
+              <p> Sender Email &nbsp; </p>
+              <div class="form-label-group">
+                <input type="email" name="SND_EMAIL" id="SND_EMAIL" class="form-control" required>
+              </div>
+            </div>
             </div>
             </div>
               <br>
