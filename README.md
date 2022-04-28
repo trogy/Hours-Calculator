@@ -1,7 +1,7 @@
 # Hours Calculator
  Calculate weekly hours
 
- ##Installation
+ ## Installation
  
  ###### Desktop
  Download the installer or zip file this is bundled with PHP Desktop and install or open the executable.
